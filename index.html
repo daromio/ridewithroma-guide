@@ -5,19 +5,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Kitesurfing in Tulum: Beginner Guide</title>
-  <meta name="description" content="Discover kitesurfing in Tulum, Mexico. Learn about beginner lessons, wind season, safety and how long it takes to learn with Ride With Roma.">
+  <title>Kitesurfing in Tulum: Beginner Guide | Ride With Roma</title>
+
+  <meta
+    name="description"
+    content="Planning to learn kitesurfing in Tulum? Discover how lessons work, how long it takes to learn, the best season, safety tips and what to expect."
+  >
+
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://guide.ridewithroma.com/">
-  <meta name="theme-color" content="#243b38">
+  <meta name="theme-color" content="#183b3b">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kitesurfing in Tulum: Beginner Guide">
+  <meta
+    property="og:description"
+    content="Everything you need to know before your first kitesurfing lesson in Tulum."
+  >
+  <meta property="og:url" content="https://guide.ridewithroma.com/">
+  <meta
+    property="og:image"
+    content="https://guide.ridewithroma.com/tulum_kitesurfing_sunset.jpg"
+  >
 
   <style>
     :root {
-      --bg: #f8f7f3;
-      --ink: #243b38;
-      --muted: #687772;
-      --line: #dedfd7;
-      --accent: #bdc9b9;
+      --ink: #243633;
+      --muted: #687773;
+      --cream: #f8f7f2;
+      --white: #ffffff;
+      --sand: #e8e2d6;
+      --teal: #315c55;
+      --teal-dark: #203f3a;
+      --content-width: 900px;
     }
 
     * {
@@ -26,39 +46,37 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 80px;
     }
 
     body {
       margin: 0;
-      background: var(--bg);
+      background: var(--cream);
       color: var(--ink);
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.7;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
     }
 
     a {
       color: inherit;
     }
 
-    .wrap {
-      width: min(1080px, 88%);
-      margin: auto;
+    img {
+      max-width: 100%;
     }
 
-    /* FULL-SCREEN HERO */
+    /* HERO */
 
     .hero {
       position: relative;
-      isolation: isolate;
-      min-height: 100vh;
-      min-height: 100svh;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 40px max(6%, calc((100% - 1080px) / 2));
-      color: #fff;
-      background-color: #243b38;
+      min-height: 100svh;
+      min-height: 100vh;
+      color: var(--white);
       background-image:
         linear-gradient(
           rgba(0, 0, 0, 0.5),
@@ -66,167 +84,491 @@
         ),
         url("/tulum_kitesurfing_sunset.jpg");
       background-size: cover;
-      background-position: center;
+      background-position: center center;
       background-repeat: no-repeat;
+      isolation: isolate;
     }
 
     .hero-nav {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
+      position: relative;
+      z-index: 2;
       display: flex;
-      justify-content: flex-start;
       align-items: center;
-      padding: 28px 6%;
+      justify-content: space-between;
+      width: 100%;
+      padding: 30px 6%;
     }
 
-    .hero-nav a {
+    .brand {
       color: #fff;
+      font-size: 19px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
       text-decoration: none;
     }
 
-    .hero-nav .brand {
-      font-size: 14px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      font-weight: 600;
-    }
-
     .hero-content {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       width: 100%;
-      max-width: 1080px;
-      padding-top: 45px;
+      padding: 48px 24px 100px;
+      text-align: center;
     }
 
-    h1 {
-      font-family: Georgia, serif;
-      font-weight: 400;
-      font-size: clamp(44px, 7vw, 84px);
-      line-height: 1.05;
-      letter-spacing: -2px;
-      margin: 22px 0;
+    .hero h1 {
       max-width: 1000px;
+      margin: 0 0 22px;
+      color: #fff;
+      font-size: clamp(38px, 5.4vw, 72px);
+      font-weight: 500;
+      line-height: 1.12;
+      letter-spacing: -2.4px;
+      text-wrap: balance;
     }
 
     .hero-intro {
       max-width: none;
-      white-space: nowrap;
+      margin: 0 0 34px;
+      color: rgba(255, 255, 255, 0.92);
       font-size: clamp(12px, 1.5vw, 19px);
       line-height: 1.7;
-      color: rgba(255, 255, 255, 0.92);
+      white-space: nowrap;
     }
 
     .button {
-      display: inline-block;
-      background: var(--ink);
-      color: #fff;
-      padding: 14px 23px;
-      text-decoration: none;
-      font-size: 13px;
-      margin-top: 20px;
-    }
-
-    .hero .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 13px 26px;
+      border: 1px solid #fff;
+      border-radius: 2px;
       background: #fff;
-      color: var(--ink);
-      transition: background 0.2s ease;
+      color: #203c37;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s ease, color 0.2s ease;
     }
 
-    .hero .button:hover {
-      background: #e9ede5;
+    .button:hover {
+      background: transparent;
+      color: #fff;
     }
 
-    main.wrap {
-      padding-top: 35px;
+    /* GENERAL LAYOUT */
+
+    .section {
+      padding: 100px 24px;
     }
 
-    section.content-section {
-      padding: 55px 0;
-      border-top: 1px solid var(--line);
+    .section-inner {
+      width: 100%;
+      max-width: var(--content-width);
+      margin: 0 auto;
+    }
+
+    .section-narrow {
+      max-width: 760px;
     }
 
     .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: 3px;
+      margin: 0 0 16px;
+      color: var(--teal);
       font-size: 11px;
-      color: var(--muted);
+      font-weight: 700;
+      letter-spacing: 2.4px;
+      line-height: 1.5;
+      text-transform: uppercase;
     }
 
     h2 {
-      font-family: Georgia, serif;
-      font-size: clamp(29px, 4vw, 42px);
+      margin: 0 0 24px;
+      color: var(--ink);
+      font-size: clamp(30px, 4vw, 46px);
+      font-weight: 500;
       line-height: 1.2;
-      font-weight: 400;
+      letter-spacing: -1.2px;
     }
 
     h3 {
-      font-size: 17px;
-      font-weight: 500;
+      margin: 0 0 10px;
+      color: var(--ink);
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.4;
+      letter-spacing: -0.3px;
+    }
+
+    p {
+      margin: 0 0 18px;
+    }
+
+    .lead {
+      color: #52635e;
+      font-size: 18px;
+      line-height: 1.8;
     }
 
     .muted {
       color: var(--muted);
     }
 
-    .grid {
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: var(--sand);
+    }
+
+    /* INTRO */
+
+    .intro-section {
+      background: var(--cream);
+    }
+
+    /* FEATURE GRID */
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 34px;
+      margin-top: 48px;
+    }
+
+    .feature {
+      padding-top: 24px;
+      border-top: 1px solid #d8d8ce;
+    }
+
+    .feature-number {
+      display: block;
+      margin-bottom: 18px;
+      color: var(--teal);
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    .feature p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* PROCESS */
+
+    .process-section {
+      background: #eeeee7;
+    }
+
+    .process-list {
+      margin-top: 42px;
+      border-top: 1px solid #d5d7ce;
+    }
+
+    .process-step {
+      display: grid;
+      grid-template-columns: 70px 1fr;
+      gap: 20px;
+      padding: 28px 0;
+      border-bottom: 1px solid #d5d7ce;
+    }
+
+    .step-number {
+      color: var(--teal);
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    .process-step p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* CALLOUT */
+
+    .callout {
+      margin-top: 32px;
+      padding: 28px 30px;
+      border-left: 2px solid var(--teal);
+      background: #f0f0e9;
+    }
+
+    .callout p {
+      margin: 0;
+    }
+
+    /* SEASON */
+
+    .season-section {
+      background: var(--teal-dark);
+      color: #fff;
+    }
+
+    .season-section h2,
+    .season-section h3 {
+      color: #fff;
+    }
+
+    .season-section .eyebrow {
+      color: #c4d9cc;
+    }
+
+    .season-section .lead,
+    .season-section p {
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .season-details {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 45px;
+      gap: 40px;
+      margin-top: 40px;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.23);
     }
 
-    .card {
-      padding: 22px 0;
-      border-top: 1px solid var(--line);
+    .season-details p {
+      margin-bottom: 0;
+      font-size: 15px;
     }
 
-    .number {
+    /* SAFETY */
+
+    .safety-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 32px;
+      margin-top: 40px;
+    }
+
+    .safety-item {
+      padding-top: 22px;
+      border-top: 1px solid #d8d8ce;
+    }
+
+    .safety-item p {
+      margin: 0;
       color: var(--muted);
-      font-size: 12px;
-      letter-spacing: 2px;
+      font-size: 15px;
     }
 
-    .cta {
-      background: #e9ede5;
-      padding: 42px;
-      margin: 35px 0;
+    /* FAQ */
+
+    .faq-section {
+      background: #eeeee7;
     }
+
+    .faq-list {
+      margin-top: 36px;
+      border-top: 1px solid #d5d7ce;
+    }
+
+    details {
+      padding: 22px 0;
+      border-bottom: 1px solid #d5d7ce;
+    }
+
+    summary {
+      position: relative;
+      padding-right: 34px;
+      color: var(--ink);
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 1.5;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      position: absolute;
+      top: 0;
+      right: 2px;
+      content: "+";
+      color: var(--teal);
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    .faq-answer {
+      padding-top: 14px;
+      color: var(--muted);
+    }
+
+    .faq-answer p {
+      margin: 0;
+    }
+
+    /* FINAL CTA */
+
+    .cta-section {
+      padding: 100px 24px;
+      background: #dfe7df;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      max-width: 650px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .cta-section p {
+      max-width: 580px;
+      margin: 0 auto 30px;
+      color: #52635e;
+    }
+
+    .button-dark {
+      border-color: var(--teal-dark);
+      background: var(--teal-dark);
+      color: #fff;
+    }
+
+    .button-dark:hover {
+      background: transparent;
+      color: var(--teal-dark);
+    }
+
+    /* FOOTER */
 
     footer {
-      padding: 30px 0 45px;
-      border-top: 1px solid var(--line);
-      font-size: 12px;
-      color: var(--muted);
+      padding: 32px 24px;
+      background: #203f3a;
+      color: rgba(255, 255, 255, 0.78);
     }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      width: 100%;
+      max-width: var(--content-width);
+      margin: 0 auto;
+      font-size: 13px;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* MOBILE */
 
     @media (max-width: 650px) {
       .hero {
         min-height: 100svh;
-        padding: 100px 24px 50px;
-        background-position: center;
+        background-position: center center;
       }
 
       .hero-nav {
-        padding: 22px 24px;
+        padding: 24px 22px;
       }
 
-      h1 {
-        font-size: clamp(42px, 12vw, 62px);
-        letter-spacing: -1px;
+      .brand {
+        font-size: 18px;
+      }
+
+      .hero-content {
+        padding: 40px 22px 70px;
+      }
+
+      .hero h1 {
+        margin-bottom: 18px;
+        font-size: clamp(37px, 10vw, 52px);
+        line-height: 1.12;
+        letter-spacing: -1.5px;
       }
 
       .hero-intro {
-        white-space: normal;
+        max-width: 430px;
+        margin-bottom: 28px;
         font-size: 16px;
+        line-height: 1.65;
+        white-space: normal;
       }
 
-      .grid {
+      .section {
+        padding: 70px 22px;
+      }
+
+      h2 {
+        font-size: 34px;
+        letter-spacing: -0.8px;
+      }
+
+      .lead {
+        font-size: 17px;
+      }
+
+      .feature-grid {
         grid-template-columns: 1fr;
+        gap: 28px;
+        margin-top: 36px;
+      }
+
+      .feature {
+        padding-top: 20px;
+      }
+
+      .process-step {
+        grid-template-columns: 38px 1fr;
+        gap: 12px;
+        padding: 24px 0;
+      }
+
+      .callout {
+        padding: 22px;
+      }
+
+      .season-details,
+      .safety-list {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .season-details {
+        margin-top: 30px;
+        padding-top: 24px;
+      }
+
+      .cta-section {
+        padding: 72px 22px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
         gap: 10px;
       }
+    }
 
-      .cta {
-        padding: 25px;
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
       }
     }
   </style>
@@ -234,18 +576,15 @@
 
 <body>
 
-  <!-- FULL-SCREEN INTRO -->
-
-  <div class="hero">
-
-    <nav class="hero-nav">
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <nav class="hero-nav" aria-label="Main navigation">
       <a class="brand" href="https://ridewithroma.com">
         Ride With Roma
       </a>
     </nav>
 
     <div class="hero-content">
-
       <h1>Kitesurfing in Tulum: Beginner Guide</h1>
 
       <p class="hero-intro">
@@ -253,145 +592,438 @@
       </p>
 
       <a class="button" href="https://ridewithroma.com">
-        Explore lessons ↗
+        Explore lessons <span aria-hidden="true">↗</span>
       </a>
-
     </div>
-  </div>
+  </header>
 
-  <!-- MAIN GUIDE -->
+  <main>
 
-  <main class="wrap">
+    <!-- INTRODUCTION -->
+    <section class="section intro-section">
+      <div class="section-inner section-narrow">
+        <p class="eyebrow">Start here</p>
 
-    <section class="content-section">
-      <div class="eyebrow">Start here</div>
+        <h2>Your first kitesurfing experience in Tulum</h2>
 
-      <h2>Your journey starts with the wind.</h2>
+        <p class="lead">
+          Imagine turquoise Caribbean water, warm tropical air and the feeling
+          of being pulled across the sea by the wind. Kitesurfing combines
+          elements of surfing, wakeboarding and flying a kite into one
+          unforgettable experience.
+        </p>
 
-      <p class="muted">
-        You don't need previous board-sport experience to start
-        learning kitesurfing. Lessons introduce you to kite control,
-        wind awareness and water skills step by step, with safety
-        as the priority.
-      </p>
+        <p>
+          If you're visiting Tulum and thinking about trying kitesurfing,
+          you don't need previous experience. Lessons start on the beach,
+          where you learn to control the kite before moving into the water.
+          Your instructor guides you through each step at a pace that feels
+          comfortable and safe.
+        </p>
 
-      <div class="grid">
-
-        <article class="card">
-          <div class="number">01 / THE BASICS</div>
-          <h3>What is kitesurfing?</h3>
-          <p class="muted">
-            Kitesurfing combines a controllable kite, a board and
-            the power of the wind to move across the water.
-            Beginners first learn to control the kite and
-            understand the wind.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="number">02 / YOUR FIRST SESSION</div>
-          <h3>What happens in a lesson?</h3>
-          <p class="muted">
-            Your instructor introduces the equipment, wind window
-            and safety systems before guiding you through kite
-            control and practical water exercises suited to
-            your progress.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="number">03 / YOUR PROGRESS</div>
-          <h3>How many lessons do you need?</h3>
-          <p class="muted">
-            Progress depends on wind, conditions, coordination
-            and practice. Several hours may be enough to experience
-            your first board rides, while riding independently
-            usually takes more sessions.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="number">04 / WHEN TO COME</div>
-          <h3>Kitesurfing season in Tulum</h3>
-          <p class="muted">
-            The main riding season is generally November to May,
-            but wind varies day to day. Check the forecast and
-            confirm local conditions before planning a lesson.
-          </p>
-        </article>
-
+        <p>
+          This guide explains how kitesurfing works, what happens during
+          your first lesson, how many hours you may need and when to visit
+          Tulum for the best chance of finding suitable wind.
+        </p>
       </div>
     </section>
 
-    <section class="content-section">
-      <div class="eyebrow">Learn with confidence</div>
+    <div class="divider"></div>
 
-      <h2>Safety comes first.</h2>
+    <!-- WHAT IS KITESURFING -->
+    <section class="section">
+      <div class="section-inner">
+        <p class="eyebrow">The basics</p>
 
-      <p class="muted">
-        Kitesurfing is a wind-dependent water sport. Choose
-        qualified instruction, use appropriate equipment, learn
-        the safety systems and assess local weather and water
-        conditions before every session. Lessons should only
-        take place when conditions are suitable.
-      </p>
+        <h2>What is kitesurfing?</h2>
+
+        <p class="lead">
+          Kitesurfing is a water sport in which a large controllable kite
+          uses the wind to pull you across the water on a board.
+        </p>
+
+        <p>
+          You steer the kite with a control bar connected by lines. A harness
+          transfers much of the kite's pull to your body, while the board
+          helps you ride across the water. Once you understand how the kite
+          responds to your movements, you can gradually learn to stand up,
+          ride in both directions and eventually explore turns and jumps.
+        </p>
+
+        <div class="feature-grid">
+          <article class="feature">
+            <span class="feature-number">01 / CONTROL</span>
+            <h3>Learn the kite</h3>
+            <p>
+              Understand wind direction, the wind window and how small
+              movements on the bar control the kite.
+            </p>
+          </article>
+
+          <article class="feature">
+            <span class="feature-number">02 / WATER</span>
+            <h3>Build confidence</h3>
+            <p>
+              Practise body-dragging through the water and learn how to
+              control your position without the board.
+            </p>
+          </article>
+
+          <article class="feature">
+            <span class="feature-number">03 / RIDE</span>
+            <h3>Get on the board</h3>
+            <p>
+              Combine kite control with board skills and work toward
+              your first rides across the water.
+            </p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section class="content-section">
-      <div class="eyebrow">Frequently asked questions</div>
+    <!-- HOW LESSONS WORK -->
+    <section class="section process-section">
+      <div class="section-inner section-narrow">
+        <p class="eyebrow">Your first lesson</p>
 
-      <h2>Before you book</h2>
+        <h2>How do kitesurfing lessons work?</h2>
 
-      <h3>Do I need to know how to surf?</h3>
-      <p class="muted">
-        No. Previous surfing experience is not required.
-        Swimming ability and comfort in the water are important.
-      </p>
+        <p class="lead">
+          Learning is a progression. Each stage gives you the skills
+          needed to move on to the next one.
+        </p>
 
-      <h3>What should I bring?</h3>
-      <p class="muted">
-        Bring swimwear, sun protection and drinking water.
-        Confirm the day's conditions and any additional
-        recommendations with your instructor.
-      </p>
+        <div class="process-list">
+          <article class="process-step">
+            <span class="step-number">01</span>
+            <div>
+              <h3>Wind and safety basics</h3>
+              <p>
+                Begin by understanding the wind, the equipment, the safety
+                systems and the basic rules of the spot. Before flying a kite,
+                you should know how to stop the power when needed.
+              </p>
+            </div>
+          </article>
 
-      <h3>Where can I take lessons?</h3>
-      <p class="muted">
-        Ride With Roma offers kitesurfing lessons in Tulum, Mexico.
-        Contact us to discuss your experience, dates and
-        the current conditions.
-      </p>
+          <article class="process-step">
+            <span class="step-number">02</span>
+            <div>
+              <h3>Kite control on the beach</h3>
+              <p>
+                Learn how to launch and land the kite with assistance,
+                steer it in different directions and manage its power.
+                This is the foundation for everything that follows.
+              </p>
+            </div>
+          </article>
+
+          <article class="process-step">
+            <span class="step-number">03</span>
+            <div>
+              <h3>Body-dragging in the water</h3>
+              <p>
+                Practise moving through the water using the kite without
+                a board. You learn to control your direction and recover
+                the board if it drifts away.
+              </p>
+            </div>
+          </article>
+
+          <article class="process-step">
+            <span class="step-number">04</span>
+            <div>
+              <h3>Your first rides</h3>
+              <p>
+                Once your kite control and water skills are ready, you'll
+                work on starting with the board, balancing and riding
+                short distances.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="callout">
+          <p>
+            <strong>Every student progresses differently.</strong>
+            Wind conditions, previous board-sport experience, coordination
+            and time on the water all influence how quickly you learn.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <!-- CONTACT CTA -->
+    <!-- HOW MANY LESSONS -->
+    <section class="section">
+      <div class="section-inner section-narrow">
+        <p class="eyebrow">Set your expectations</p>
 
-    <div class="cta">
-      <div class="eyebrow">Ride With Roma</div>
+        <h2>How many lessons do you need?</h2>
 
-      <h2>See you on the water.</h2>
+        <p class="lead">
+          Most beginners need several hours to experience their first
+          rides, and more practice to become independent.
+        </p>
 
-      <p class="muted">
-        Planning your first kitesurfing experience in Tulum?
-        Get in touch to find out more about lessons and
-        suitable conditions.
-      </p>
+        <p>
+          As a general guide, around 3–4 hours can introduce you to kite
+          control, basic water skills and the first stages of riding.
+          This is not a guarantee of standing on the board or riding
+          independently within that time.
+        </p>
 
-      <a class="button" href="https://ridewithroma.com">
-        Discover lessons &amp; contact
-      </a>
-    </div>
+        <p>
+          Many beginners need approximately 10–12 hours or more to work
+          toward independent riding. Some progress faster, while others
+          benefit from additional sessions to build confidence and
+          consistency.
+        </p>
+
+        <p>
+          If you're visiting Tulum for a short holiday, it's helpful to
+          leave several days available for lessons. Your instructor can
+          adapt the plan to your experience and the wind forecast.
+        </p>
+      </div>
+    </section>
+
+    <!-- TULUM SEASON -->
+    <section class="section season-section">
+      <div class="section-inner">
+        <p class="eyebrow">Wind and location</p>
+
+        <h2>Kitesurfing season in Tulum</h2>
+
+        <p class="lead">
+          Tulum's Caribbean coastline offers beautiful water and tropical
+          conditions, but kitesurfing depends on the wind.
+        </p>
+
+        <p>
+          The main kitesurfing season is generally November through May.
+          During this period, cold fronts and seasonal weather patterns
+          can bring rideable wind. Conditions vary from day to day, and
+          no month guarantees wind for every session.
+        </p>
+
+        <div class="season-details">
+          <div>
+            <h3>Best time to plan</h3>
+            <p>
+              November to May is the usual season to consider when planning
+              a kitesurfing trip. Check the forecast shortly before arrival
+              and keep your schedule flexible.
+            </p>
+          </div>
+
+          <div>
+            <h3>Choosing the right conditions</h3>
+            <p>
+              Wind strength and direction, waves, currents, seaweed and
+              local beach conditions all matter. Your instructor should
+              assess the conditions before each session.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SAFETY -->
+    <section class="section">
+      <div class="section-inner">
+        <p class="eyebrow">Learn with confidence</p>
+
+        <h2>Is kitesurfing safe for beginners?</h2>
+
+        <p class="lead">
+          Kitesurfing is an exciting sport, but it requires proper
+          instruction, suitable conditions and respect for the wind.
+        </p>
+
+        <p>
+          Beginners should learn with a qualified instructor rather than
+          attempting to teach themselves. A good lesson introduces the
+          safety systems, equipment checks, kite handling and the local
+          conditions before progressing to more demanding skills.
+        </p>
+
+        <div class="safety-list">
+          <article class="safety-item">
+            <h3>Choose a qualified instructor</h3>
+            <p>
+              Look for relevant instructor certification, clear explanations
+              and lessons adapted to your level.
+            </p>
+          </article>
+
+          <article class="safety-item">
+            <h3>Respect the conditions</h3>
+            <p>
+              Lessons should only take place when wind, water and visibility
+              are appropriate for your ability.
+            </p>
+          </article>
+
+          <article class="safety-item">
+            <h3>Use suitable equipment</h3>
+            <p>
+              Your kite, lines, harness and safety systems should be checked
+              and appropriate for the conditions.
+            </p>
+          </article>
+
+          <article class="safety-item">
+            <h3>Take your time</h3>
+            <p>
+              There is no need to rush. Building solid kite control first
+              helps create a stronger foundation for riding.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq-section">
+      <div class="section-inner section-narrow">
+        <p class="eyebrow">Good to know</p>
+
+        <h2>Frequently asked questions</h2>
+
+        <div class="faq-list">
+          <details>
+            <summary>Do I need experience to start kitesurfing?</summary>
+            <div class="faq-answer">
+              <p>
+                No. Beginner lessons start with the fundamentals of wind,
+                equipment and kite control. You don't need previous
+                kitesurfing experience.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Do I need to be a strong swimmer?</summary>
+            <div class="faq-answer">
+              <p>
+                You should be comfortable in the water and able to swim.
+                Tell your instructor about your swimming ability before
+                your lesson so they can discuss whether the session is
+                appropriate for you.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Do I need to bring my own equipment?</summary>
+            <div class="faq-answer">
+              <p>
+                No. Lessons can include the kitesurfing equipment you'll
+                use during your session. Confirm the exact equipment and
+                what's included when booking.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>How long is a kitesurfing lesson?</summary>
+            <div class="faq-answer">
+              <p>
+                Lesson length depends on the package, conditions and
+                your learning goals. Ask about available session times
+                and the recommended duration for your experience level.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>What should I bring to my lesson?</summary>
+            <div class="faq-answer">
+              <p>
+                Bring swimwear, sun protection, drinking water and a
+                towel. Your instructor can advise you on any additional
+                equipment or clothing needed for the conditions.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>What happens if there is no wind?</summary>
+            <div class="faq-answer">
+              <p>
+                Kitesurfing depends on suitable wind. If conditions are
+                not appropriate, your instructor should discuss the
+                options with you, which may include rescheduling.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Where do lessons take place in Tulum?</summary>
+            <div class="faq-answer">
+              <p>
+                Ride With Roma works from the beach at Ahau Hotel in Tulum.
+                The exact lesson location can depend on the day's wind
+                direction and conditions. Contact us to confirm the
+                meeting point before your session.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>When is the best time to learn in Tulum?</summary>
+            <div class="faq-answer">
+              <p>
+                November through May is generally considered the main
+                kitesurfing season. Wind is never guaranteed, so it's
+                best to check the forecast and keep some flexibility
+                in your travel plans.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="section-inner">
+        <p class="eyebrow">Ride with Roma</p>
+
+        <h2>Ready to experience kitesurfing in Tulum?</h2>
+
+        <p>
+          Discover private and group lessons, find out what's included
+          and get in touch to plan your first session on the Caribbean Sea.
+        </p>
+
+        <a
+          class="button button-dark"
+          href="https://ridewithroma.com"
+        >
+          Explore lessons <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
 
   </main>
 
+  <!-- FOOTER -->
   <footer>
-    <div class="wrap">
-      © <span id="year">2026</span> Ride With Roma ·
-      Kitesurfing in Tulum, Mexico
+    <div class="footer-inner">
+      <span>
+        © <span id="year"></span> Ride With Roma
+      </span>
+
+      <a href="https://ridewithroma.com">
+        ridewithroma.com ↗
+      </a>
     </div>
   </footer>
 
   <script>
-    document.getElementById('year').textContent =
+    document.getElementById("year").textContent =
       new Date().getFullYear();
   </script>
 
