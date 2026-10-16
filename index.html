@@ -8,7 +8,8 @@
   <meta name="description" content="Discover kitesurfing in Tulum, Mexico. Learn about beginner lessons, wind season, safety and how long it takes to learn with Ride With Roma.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://guide.ridewithroma.com/">
-  <meta name="theme-color" content="#f8f7f3">
+  <meta name="theme-color" content="#243b38">
+
   <style>
     :root {
       --bg: #f8f7f3;
@@ -17,8 +18,11 @@
       --line: #dedfd7;
       --accent: #bdc9b9;
     }
+
     * { box-sizing: border-box; }
+
     html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       background: var(--bg);
@@ -26,131 +30,254 @@
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.7;
     }
+
     a { color: inherit; }
-    .wrap { width: min(1080px, 88%); margin: auto; }
-    header { padding: 25px 0; border-bottom: 1px solid var(--line); }
-    nav { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
-    .brand { font-size: 14px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; }
-    nav a { text-decoration: none; font-size: 13px; }
-    .hero { padding: 100px 0 85px; max-width: 800px; }
-    .eyebrow { text-transform: uppercase; letter-spacing: 3px; font-size: 11px; color: var(--muted); }
-    h1 { font-family: Georgia, serif; font-weight: 400; font-size: clamp(42px, 7vw, 76px); line-height: 1.08; letter-spacing: -2px; margin: 22px 0; }
-    h2 { font-family: Georgia, serif; font-size: clamp(29px, 4vw, 42px); line-height: 1.2; font-weight: 400; }
-    h3 { font-size: 17px; font-weight: 500; }
-    .intro { max-width: 620px; color: var(--muted); font-size: 18px; }
-    .button { display: inline-block; background: var(--ink); color: white; padding: 14px 23px; text-decoration: none; font-size: 13px; margin-top: 20px; }
-    section { padding: 55px 0; border-top: 1px solid var(--line); }
-    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 45px; }
-    .card { padding: 22px 0; border-top: 1px solid var(--line); }
-    .number { color: var(--muted); font-size: 12px; letter-spacing: 2px; }
-    .muted { color: var(--muted); }
-    .cta { background: #e9ede5; padding: 42px; margin: 35px 0; }
-    footer { padding: 30px 0 45px; border-top: 1px solid var(--line); font-size: 12px; color: var(--muted); }
-    @media(max-width: 650px) {
-      .hero { padding: 70px 0 60px; }
-      .grid { grid-template-columns: 1fr; gap: 10px; }
-      .cta { padding: 25px; }
-      nav { align-items: flex-start; }
+
+    .wrap {
+      width: min(1080px, 88%);
+      margin: auto;
     }
 
-.hero {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 40px 8%;
-  color: #fff;
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/tulum_kitesurfing_sunset.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+    /* FULL-SCREEN HERO */
+    .hero {
+      position: relative;
+      isolation: isolate;
+      min-height: 100vh;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px max(6%, calc((100% - 1080px) / 2));
+      color: #fff;
+      background-color: #243b38;
+      background-image:
+        linear-gradient(
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url("/tulum_kitesurfing_sunset.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
 
-.hero a {
-  color: #fff;
-}
+    .hero-nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 28px 6%;
+      font-size: 13px;
+    }
 
-.hero h1 {
-  max-width: 850px;
-  font-size: clamp(42px, 7vw, 88px);
-  line-height: 1.05;
-  margin: 24px 0;
-}
+    .hero-nav a {
+      color: #fff;
+      text-decoration: none;
+    }
 
-.hero p {
-  max-width: 650px;
-  font-size: 18px;
-  line-height: 1.7;
-}
+    .hero-nav .brand {
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
 
-@media (max-width: 600px) {
-  .hero {
-    padding: 30px 24px;
-    background-position: center;
-  }
-}
+    .hero-content {
+      width: 100%;
+      max-width: 900px;
+      padding-top: 45px;
+    }
 
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .hero .eyebrow {
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(44px, 7vw, 84px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin: 22px 0;
+      max-width: 850px;
+    }
+
+    .hero-intro {
+      max-width: 600px;
+      font-size: clamp(16px, 2vw, 19px);
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.92);
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--ink);
+      color: white;
+      padding: 14px 23px;
+      text-decoration: none;
+      font-size: 13px;
+      margin-top: 20px;
+    }
+
+    .hero .button {
+      background: #fff;
+      color: var(--ink);
+    }
+
+    main.wrap {
+      padding-top: 35px;
+    }
+
+    section.content-section {
+      padding: 55px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    h2 {
+      font-family: Georgia, serif;
+      font-size: clamp(29px, 4vw, 42px);
+      line-height: 1.2;
+      font-weight: 400;
+    }
+
+    h3 {
+      font-size: 17px;
+      font-weight: 500;
+    }
+
+    .intro {
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 45px;
+    }
+
+    .card {
+      padding: 22px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .number {
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    .muted { color: var(--muted); }
+
+    .cta {
+      background: #e9ede5;
+      padding: 42px;
+      margin: 35px 0;
+    }
+
+    footer {
+      padding: 30px 0 45px;
+      border-top: 1px solid var(--line);
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 650px) {
+      .hero {
+        min-height: 100svh;
+        padding: 100px 24px 50px;
+        background-position: center;
+      }
+
+      .hero-nav {
+        padding: 22px 24px;
+        align-items: flex-start;
+      }
+
+      .hero-nav a:last-child {
+        text-align: right;
+        max-width: 145px;
+      }
+
+      h1 {
+        font-size: clamp(42px, 12vw, 62px);
+        letter-spacing: -1px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .cta { padding: 25px; }
+    }
   </style>
 </head>
+
 <body>
-<section class="hero">
-  <a href="https://ridewithroma.com">Ride With Roma ↗</a>
 
-  <p>Tulum · Mexican Caribbean</p>
-
-  <h1>Kitesurfing in Tulum: A Beginner’s Guide</h1>
-
-  <p>
-    Warm Caribbean water, consistent winds and your guide
-    to learning kitesurfing in Tulum.
-  </p>
-</section>
-  <header>
-    <nav class="wrap">
+  <div class="hero">
+    <nav class="hero-nav">
       <a class="brand" href="https://ridewithroma.com">Ride With Roma</a>
       <a href="https://ridewithroma.com">Private lessons in Tulum ↗</a>
     </nav>
-  </header>
+
+    <div class="hero-content">
+      <div class="eyebrow">Tulum · Mexican Caribbean</div>
+
+      <h1>Kitesurfing in Tulum: A Beginner’s Guide</h1>
+
+      <p class="hero-intro">
+        Warm Caribbean water, open horizons and the power of the wind.
+        Everything you need to know before your first kitesurfing
+        lesson in Tulum, Mexico.
+      </p>
+
+      <a class="button" href="https://ridewithroma.com">
+        Explore private lessons
+      </a>
+    </div>
+  </div>
 
   <main class="wrap">
-    <div class="hero">
-      <div class="eyebrow">Tulum · Mexican Caribbean</div>
-      <h1>Kitesurfing in Tulum: A Beginner’s Guide</h1>
-<img
-  src="/tulum_kitesurfing_sunset.jpg"
-  alt="Kitesurfing at sunset in Tulum, Mexico"
-  width="1600"
-  height="900"
-  fetchpriority="high"
-  style="display:block;width:100%;height:auto;max-height:650px;object-fit:cover;margin:32px 0;"
->
-      <p class="intro">Warm Caribbean water, open horizons and the power of the wind. Everything you need to know before your first kitesurfing lesson in Tulum, Mexico.</p>
-      <a class="button" href="https://ridewithroma.com">Explore private lessons</a>
-    </div>
 
-    <section>
+    <section class="content-section">
       <div class="eyebrow">Start here</div>
       <h2>Your journey starts with the wind.</h2>
       <p class="muted">You don't need previous board-sport experience to start learning kitesurfing. Lessons introduce you to kite control, wind awareness and water skills step by step, with safety as the priority.</p>
+
       <div class="grid">
         <article class="card">
           <div class="number">01 / THE BASICS</div>
           <h3>What is kitesurfing?</h3>
           <p class="muted">Kitesurfing combines a controllable kite, a board and the power of the wind to move across the water. Beginners first learn to control the kite and understand the wind.</p>
         </article>
+
         <article class="card">
           <div class="number">02 / YOUR FIRST SESSION</div>
           <h3>What happens in a lesson?</h3>
           <p class="muted">Your instructor introduces the equipment, wind window and safety systems before guiding you through kite control and practical water exercises suited to your progress.</p>
         </article>
+
         <article class="card">
           <div class="number">03 / YOUR PROGRESS</div>
           <h3>How many lessons do you need?</h3>
           <p class="muted">Progress depends on wind, conditions, coordination and practice. Several hours may be enough to experience your first board rides, while riding independently usually takes more sessions.</p>
         </article>
+
         <article class="card">
           <div class="number">04 / WHEN TO COME</div>
           <h3>Kitesurfing season in Tulum</h3>
@@ -159,19 +286,22 @@
       </div>
     </section>
 
-    <section>
+    <section class="content-section">
       <div class="eyebrow">Learn with confidence</div>
       <h2>Safety comes first.</h2>
       <p class="muted">Kitesurfing is a wind-dependent water sport. Choose qualified instruction, use appropriate equipment, learn the safety systems and assess local weather and water conditions before every session. Lessons should only take place when conditions are suitable.</p>
     </section>
 
-    <section>
+    <section class="content-section">
       <div class="eyebrow">Frequently asked questions</div>
       <h2>Before you book</h2>
+
       <h3>Do I need to know how to surf?</h3>
       <p class="muted">No. Previous surfing experience is not required. Swimming ability and comfort in the water are important.</p>
+
       <h3>What should I bring?</h3>
       <p class="muted">Bring swimwear, sun protection and drinking water. Confirm the day's conditions and any additional recommendations with your instructor.</p>
+
       <h3>Where can I take lessons?</h3>
       <p class="muted">Ride With Roma offers kitesurfing lessons in Tulum, Mexico. Contact us to discuss your experience, dates and the current conditions.</p>
     </section>
@@ -180,15 +310,18 @@
       <div class="eyebrow">Ride With Roma</div>
       <h2>See you on the water.</h2>
       <p class="muted">Planning your first kitesurfing experience in Tulum? Get in touch to find out more about lessons and suitable conditions.</p>
-      <a class="button" href="https://ridewithroma.com">Discover lessons & contact</a>
+      <a class="button" href="https://ridewithroma.com">Discover lessons &amp; contact</a>
     </div>
+
   </main>
 
   <footer>
     <div class="wrap">© <span id="year">2026</span> Ride With Roma · Kitesurfing in Tulum, Mexico</div>
   </footer>
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
